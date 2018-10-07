@@ -1,0 +1,46 @@
+.ball {
+  $size: 2rem;
+  height: $size;
+  width: $size;
+  border-radius: $size/2;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+
+  &.one,
+  &.nine {
+    background-color: yellow;
+  }
+
+  &.two,
+  &.ten {
+    background-color: blue;
+  }
+
+  &.three,
+  &.eleven {
+    background-color: red;
+  }
+
+  &.four,
+  &.twelve {
+    background-color: rebeccapurple;
+  }
+
+  &.five,
+  &.thirteen {
+    background-color: orange;
+  }
+
+  &.six,
+  &.fourteen {
+    background-color: green;
+  }
+
+  &.seven,
+  &.fifteen {
+    background-color: brown;
+  }
+
+  &.eight {
+    background-color: black;
+  }
+}
