@@ -9,8 +9,21 @@ class Ball extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
 
+    let ballType
+
+    if (props.ball === 0) {
+      ballType = 'cue'
+    } else if (props.ball >= 1 && props.ball <= 7) {
+      ballType = 'solid'
+    } else if (props.ball >= 9 && props.ball <= 15) {
+      ballType = 'stripe'
+    } else {
+      ballType = 'black'
+    }
+
     this.state = {
-      ...props
+      ...props,
+      ballType
     }
 
     this.style = {
@@ -36,7 +49,7 @@ class Ball extends Component<Props, State> {
     return (
       <div
         style={this.style}
-        className={`ball ${d2w(this.state.ball)} ${this.state.player}`}
+        className={`ball ${d2w(this.state.ball)} ${this.state.ballType}`}
       />
     )
   }
